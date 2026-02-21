@@ -1,24 +1,24 @@
 import type React from "react"
 import type { Metadata, Viewport } from "next"
-import { Syne, Montserrat } from "next/font/google"
+import { Archivo_Black, Outfit } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
-const syne = Syne({
+const archivoBlack = Archivo_Black({
   subsets: ["latin"],
   variable: "--font-display",
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400"],
 })
 
-const montserrat = Montserrat({
+const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-sans",
   weight: ["300", "400", "500", "600", "700"],
 })
 
 export const metadata: Metadata = {
-  title: "ShavingKit.org - Shaving, Sharpened.",
-  description: "Precision tools for the ultimate skin ritual. From surgical-grade steel to nutrient-rich lathers. Discover the kit that defines your edge.",
+  title: "Outdoornests.com - Pack the World. Carry the Comfort.",
+  description: "Precision-engineered luggage for those who find home on the road. From indestructible hardshells to versatile weekenders -- your next nest is right here.",
   generator: "v0.app",
   icons: {
     icon: "/favicon.jpg",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#101419",
+  themeColor: "#1E3A5F",
   userScalable: true,
 }
 
@@ -36,8 +36,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${syne.variable} ${montserrat.variable}`}>
-      <body className={`font-sans antialiased`}>
+    <html lang="en" className={`${archivoBlack.variable} ${outfit.variable}`}>
+      <body className="font-sans antialiased">
         {children}
         <Analytics />
       </body>

@@ -4,37 +4,36 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --electric-chrome: #E5E4E2;
-  --razor-cyan: #00F5FF;
-  --lather-white: #F8F9FA;
-  --midnight-steel: #101419;
-  --cyber-purple: #9D4EDD;
+  --terminal-amber: #FFB300;
+  --deep-altitude: #1E3A5F;
+  --passport-teal: #26A69A;
+  --cloud-paper: #F8F9FA;
 
-  --background: var(--lather-white);
-  --foreground: var(--midnight-steel);
+  --background: var(--cloud-paper);
+  --foreground: var(--deep-altitude);
   --card: oklch(1 0 0);
-  --card-foreground: var(--midnight-steel);
+  --card-foreground: var(--deep-altitude);
   --popover: oklch(1 0 0);
-  --popover-foreground: var(--midnight-steel);
-  --primary: var(--razor-cyan);
-  --primary-foreground: var(--midnight-steel);
-  --secondary: var(--electric-chrome);
-  --secondary-foreground: var(--midnight-steel);
+  --popover-foreground: var(--deep-altitude);
+  --primary: var(--terminal-amber);
+  --primary-foreground: var(--deep-altitude);
+  --secondary: var(--deep-altitude);
+  --secondary-foreground: var(--cloud-paper);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
-  --accent: var(--cyber-purple);
-  --accent-foreground: var(--lather-white);
+  --accent: var(--passport-teal);
+  --accent-foreground: var(--cloud-paper);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: var(--electric-chrome);
+  --border: #E0E0E0;
   --input: oklch(0.922 0 0);
-  --ring: var(--razor-cyan);
+  --ring: var(--terminal-amber);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --radius: 0.75rem;
+  --radius: 1rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
@@ -46,48 +45,47 @@
 }
 
 .dark {
-  --background: var(--midnight-steel);
-  --foreground: var(--lather-white);
-  --card: oklch(0.145 0 0);
-  --card-foreground: var(--lather-white);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: var(--lather-white);
-  --primary: var(--razor-cyan);
-  --primary-foreground: var(--midnight-steel);
-  --secondary: var(--electric-chrome);
-  --secondary-foreground: var(--midnight-steel);
-  --muted: oklch(0.269 0 0);
+  --background: #0D1B2A;
+  --foreground: var(--cloud-paper);
+  --card: #162A3E;
+  --card-foreground: var(--cloud-paper);
+  --popover: #162A3E;
+  --popover-foreground: var(--cloud-paper);
+  --primary: var(--terminal-amber);
+  --primary-foreground: var(--deep-altitude);
+  --secondary: #162A3E;
+  --secondary-foreground: var(--cloud-paper);
+  --muted: #162A3E;
   --muted-foreground: oklch(0.708 0 0);
-  --accent: var(--cyber-purple);
-  --accent-foreground: var(--lather-white);
+  --accent: var(--passport-teal);
+  --accent-foreground: var(--cloud-paper);
   --destructive: oklch(0.396 0.141 25.723);
   --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: var(--electric-chrome);
-  --input: oklch(0.269 0 0);
-  --ring: var(--razor-cyan);
+  --border: #1E3A5F;
+  --input: #162A3E;
+  --ring: var(--terminal-amber);
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
   --chart-4: oklch(0.627 0.265 303.9);
   --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
+  --sidebar: #0D1B2A;
   --sidebar-foreground: oklch(0.985 0 0);
   --sidebar-primary: oklch(0.488 0.243 264.376);
   --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent: #162A3E;
   --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-border: #1E3A5F;
   --sidebar-ring: oklch(0.439 0 0);
 }
 
 @theme inline {
-  --font-sans: "Montserrat", "Geist", "Geist Fallback", sans-serif;
-  --font-display: "Syne", "Geist", sans-serif;
-  --color-electric-chrome: var(--electric-chrome);
-  --color-razor-cyan: var(--razor-cyan);
-  --color-lather-white: var(--lather-white);
-  --color-midnight-steel: var(--midnight-steel);
-  --color-cyber-purple: var(--cyber-purple);
+  --font-sans: "Outfit", "Geist", "Geist Fallback", sans-serif;
+  --font-display: "Archivo Black", "Geist", sans-serif;
+  --color-terminal-amber: var(--terminal-amber);
+  --color-deep-altitude: var(--deep-altitude);
+  --color-passport-teal: var(--passport-teal);
+  --color-cloud-paper: var(--cloud-paper);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -126,7 +124,7 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
-@keyframes iridescent-flow {
+@keyframes sunset-glow {
   0% {
     background-position: 0% 50%;
   }
@@ -138,31 +136,35 @@
   }
 }
 
-@keyframes chrome-shine {
-  0% {
-    background-position: -1000px 0;
-  }
-  100% {
-    background-position: 1000px 0;
-  }
-}
-
-@keyframes cyber-glow {
+@keyframes float-cargo {
   0%, 100% {
-    box-shadow: 0 0 10px rgba(0, 245, 255, 0.3), 0 0 20px rgba(157, 78, 221, 0.2);
+    transform: translateY(0px) rotate(0deg);
   }
-  50% {
-    box-shadow: 0 0 20px rgba(0, 245, 255, 0.6), 0 0 30px rgba(157, 78, 221, 0.4);
+  33% {
+    transform: translateY(-12px) rotate(1deg);
+  }
+  66% {
+    transform: translateY(-6px) rotate(-1deg);
   }
 }
 
-@keyframes float-smooth {
-  0%,
-  100% {
-    transform: translateY(0px) rotateX(0deg);
+@keyframes departure-pulse {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(255, 179, 0, 0.3), 0 0 20px rgba(30, 58, 95, 0.15);
   }
   50% {
-    transform: translateY(-15px) rotateX(2deg);
+    box-shadow: 0 0 20px rgba(255, 179, 0, 0.5), 0 0 40px rgba(30, 58, 95, 0.3);
+  }
+}
+
+@keyframes slide-in-up {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
@@ -178,43 +180,60 @@
     font-family: var(--font-display);
   }
 
-  .frosted-glass {
-    background: rgba(248, 249, 250, 0.7);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(229, 228, 226, 0.5);
+  .journal-card {
+    background: rgba(248, 249, 250, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(224, 224, 224, 0.6);
+    border-radius: 1rem;
   }
 
-  .dark .frosted-glass {
-    background: rgba(16, 20, 25, 0.7);
-    border: 1px solid rgba(229, 228, 226, 0.2);
+  .dark .journal-card {
+    background: rgba(22, 42, 62, 0.85);
+    border: 1px solid rgba(30, 58, 95, 0.6);
   }
 
-  .iridescent-gradient {
-    background: linear-gradient(135deg, #00F5FF 0%, #9D4EDD 50%, #E5E4E2 100%);
+  .sunset-gradient {
+    background: linear-gradient(135deg, #FFB300 0%, #FF8F00 40%, #1E3A5F 100%);
     background-size: 200% 200%;
-    animation: iridescent-flow 6s ease-in-out infinite;
+    animation: sunset-glow 8s ease-in-out infinite;
   }
 
-  .chrome-shine {
-    background: linear-gradient(90deg, transparent, rgba(229, 228, 226, 0.8), transparent);
-    background-size: 1000px 100%;
-    animation: chrome-shine 3s infinite;
+  .departure-glow {
+    animation: departure-pulse 2.5s ease-in-out infinite;
   }
 
-  .cyber-glow {
-    animation: cyber-glow 2s ease-in-out infinite;
+  .float-cargo {
+    animation: float-cargo 5s ease-in-out infinite;
   }
 
-  .float-animation {
-    animation: float-smooth 3.5s ease-in-out infinite;
+  .slide-up {
+    animation: slide-in-up 0.6s ease-out forwards;
   }
 
-  .razorblade-shimmer {
-    background: linear-gradient(90deg, 
-      rgba(229, 228, 226, 0) 0%,
-      rgba(229, 228, 226, 0.6) 50%,
-      rgba(229, 228, 226, 0) 100%
-    );
-    animation: chrome-shine 2s infinite;
+  .boarding-pass {
+    background: linear-gradient(135deg, rgba(255, 179, 0, 0.08) 0%, rgba(38, 166, 154, 0.08) 100%);
+    border: 1px dashed rgba(30, 58, 95, 0.3);
+    border-radius: 1rem;
+    position: relative;
+  }
+
+  .boarding-pass::before,
+  .boarding-pass::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--background);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .boarding-pass::before {
+    left: -10px;
+  }
+
+  .boarding-pass::after {
+    right: -10px;
   }
 }

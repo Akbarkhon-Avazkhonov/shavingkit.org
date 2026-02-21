@@ -1,91 +1,106 @@
 'use client'
 
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Plane, Shield, Globe } from 'lucide-react'
 
 export function HeroSection() {
   return (
-    <section id="hero" className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center overflow-hidden relative" style={{backgroundImage: 'url(/images/hero-bg.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed'}}>
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-lather-white/80 dark:bg-midnight-steel/80"></div>
-      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+    <section
+      id="hero"
+      className="pt-28 pb-20 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center overflow-hidden relative"
+      style={{
+        backgroundImage: 'url(/images/hero-bg.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+      }}
+    >
+      {/* Warm overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-cloud-paper/90 via-cloud-paper/80 to-terminal-amber/20 dark:from-deep-altitude/90 dark:via-deep-altitude/80 dark:to-terminal-amber/10" />
+
+      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
         {/* Left Content */}
-        <div className="space-y-8 z-10">
-          <div className="space-y-4">
-            <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-midnight-steel dark:text-lather-white leading-tight">
-              Shaving, <br />
-              <span className="iridescent-gradient bg-clip-text text-transparent">
-                Sharpened.
+        <div className="space-y-8">
+          {/* Boarding-pass badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 boarding-pass text-sm font-medium text-deep-altitude dark:text-cloud-paper">
+            <Plane size={16} className="text-terminal-amber" />
+            Your Next Adventure Starts Here
+          </div>
+
+          <div className="space-y-6">
+            <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl text-deep-altitude dark:text-cloud-paper leading-tight">
+              Pack the World.{' '}
+              <span className="sunset-gradient bg-clip-text text-transparent">
+                Carry the Comfort.
               </span>
             </h1>
-            <p className="text-lg sm:text-xl text-midnight-steel/70 dark:text-lather-white/70 max-w-2xl leading-relaxed">
-              Precision tools for the ultimate skin ritual. From surgical-grade steel to nutrient-rich lathers—discover the kit that defines your edge.
+            <p className="text-lg sm:text-xl text-deep-altitude/70 dark:text-cloud-paper/70 max-w-xl leading-relaxed">
+              Precision-engineered luggage for those who find home on the road. From indestructible hardshells to versatile weekenders -- your next nest is right here.
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 pt-8">
-            <button className="px-8 py-4 bg-gradient-to-r from-razor-cyan to-cyber-purple text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-razor-cyan/50 transition-all duration-300 flex items-center justify-center gap-2 cyber-glow">
+          <div className="flex flex-col sm:flex-row gap-4">
+            <a
+              href="#products"
+              className="px-8 py-4 bg-terminal-amber text-deep-altitude font-semibold rounded-xl hover:shadow-xl hover:shadow-terminal-amber/30 transition-all duration-300 flex items-center justify-center gap-2 departure-glow"
+            >
               Explore Collection
               <ArrowRight size={20} />
-            </button>
-            <button className="px-8 py-4 border-2 border-electric-chrome text-midnight-steel dark:text-lather-white font-semibold rounded-lg hover:bg-electric-chrome/10 transition-all duration-300">
-              Learn More
-            </button>
+            </a>
+            <a
+              href="#features"
+              className="px-8 py-4 border-2 border-deep-altitude/20 dark:border-cloud-paper/20 text-deep-altitude dark:text-cloud-paper font-semibold rounded-xl hover:bg-deep-altitude/5 dark:hover:bg-cloud-paper/5 transition-all duration-300"
+            >
+              Travel Smart
+            </a>
           </div>
 
           {/* Trust badges */}
-          <div className="flex flex-col sm:flex-row gap-6 pt-8 text-sm text-midnight-steel/60 dark:text-lather-white/60">
+          <div className="flex flex-wrap gap-6 pt-4 text-sm text-deep-altitude/60 dark:text-cloud-paper/60">
             <div className="flex items-center gap-2">
-              <span className="w-8 h-8 rounded-full bg-razor-cyan/20 flex items-center justify-center text-razor-cyan font-bold">✓</span>
-              Surgical-Grade Steel
+              <Shield size={18} className="text-passport-teal" />
+              Lifetime Guarantee
             </div>
             <div className="flex items-center gap-2">
-              <span className="w-8 h-8 rounded-full bg-razor-cyan/20 flex items-center justify-center text-razor-cyan font-bold">✓</span>
-              Lifetime Warranty
+              <Globe size={18} className="text-passport-teal" />
+              Free Global Shipping
             </div>
             <div className="flex items-center gap-2">
-              <span className="w-8 h-8 rounded-full bg-razor-cyan/20 flex items-center justify-center text-razor-cyan font-bold">✓</span>
-              Eco-Friendly
+              <Plane size={18} className="text-passport-teal" />
+              TSA Approved
             </div>
           </div>
         </div>
 
-        {/* Right Visual */}
-        <div className="relative h-96 lg:h-full min-h-96 lg:min-h-screen flex items-center justify-center">
-          {/* Animated background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-razor-cyan/10 to-cyber-purple/10 rounded-3xl blur-3xl"></div>
-          
-          {/* Chrome element */}
-          <div className="absolute w-64 h-64 sm:w-80 sm:h-80 rounded-full iridescent-gradient opacity-20 blur-3xl animate-pulse"></div>
+        {/* Right Visual - Floating Suitcase Card */}
+        <div className="relative flex items-center justify-center min-h-80 lg:min-h-[500px]">
+          {/* Warm glow behind */}
+          <div className="absolute w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-terminal-amber/15 blur-3xl animate-pulse" />
 
-          {/* Main visual - Razor blade effect */}
-          <div className="relative w-72 h-72 sm:w-96 sm:h-96 flex items-center justify-center float-animation">
-            <div className="absolute w-full h-full rounded-3xl frosted-glass border border-electric-chrome/50 shadow-2xl shadow-razor-cyan/20 flex items-center justify-center overflow-hidden">
-              {/* Water droplet effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-razor-cyan/10 via-transparent to-cyber-purple/10 rounded-3xl"></div>
-              
-              {/* Razor blade image */}
+          {/* Main card */}
+          <div className="relative w-80 h-80 sm:w-[400px] sm:h-[400px] float-cargo">
+            <div className="w-full h-full rounded-3xl journal-card border border-terminal-amber/20 shadow-2xl shadow-deep-altitude/20 overflow-hidden">
+              {/* Product image */}
               <img
-                src="/images/hero-razor.jpg"
-                alt="Premium straight razor on dark leather"
-                className="absolute inset-0 w-full h-full object-cover rounded-3xl opacity-80"
+                src="/images/product-hardshell.jpg"
+                alt="Premium hardshell suitcase on mountain ridge"
+                className="w-full h-full object-cover"
               />
-
-              {/* Content */}
-              <div className="relative z-10 text-center space-y-4">
-                <div className="text-6xl sm:text-7xl font-bold">⚔</div>
-                <p className="font-display text-2xl sm:text-3xl font-bold text-midnight-steel dark:text-lather-white">
-                  The Perfect Glide
-                </p>
-                <p className="text-sm text-midnight-steel/60 dark:text-lather-white/60">
-                  Precision Redefined
-                </p>
+              {/* Overlay info */}
+              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-deep-altitude/80 to-transparent">
+                <p className="font-display text-xl text-cloud-paper">The Explorer Series</p>
+                <p className="text-sm text-cloud-paper/80">Indestructible. Elegant. Yours.</p>
               </div>
+            </div>
+
+            {/* Price tag floating */}
+            <div className="absolute -top-4 -right-4 px-4 py-2 bg-terminal-amber text-deep-altitude font-bold rounded-xl shadow-lg departure-glow text-sm">
+              From $189
             </div>
           </div>
 
-          {/* Floating decorative elements */}
-          <div className="absolute top-12 right-12 w-20 h-20 rounded-full border-2 border-razor-cyan/30 animate-spin" style={{ animationDuration: '20s' }}></div>
-          <div className="absolute bottom-20 left-12 w-16 h-16 rounded-full border-2 border-cyber-purple/30 animate-spin" style={{ animationDuration: '25s', animationDirection: 'reverse' }}></div>
+          {/* Floating decorations */}
+          <div className="absolute top-8 right-8 w-16 h-16 rounded-full border-2 border-terminal-amber/30 animate-spin" style={{ animationDuration: '20s' }} />
+          <div className="absolute bottom-16 left-8 w-12 h-12 rounded-full border-2 border-passport-teal/30 animate-spin" style={{ animationDuration: '25s', animationDirection: 'reverse' }} />
         </div>
       </div>
     </section>
